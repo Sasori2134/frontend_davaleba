@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double+Ink:wght@100..900&family=Bitcount+Grid+Single+Ink:wght@100..900&family=Bitcount+Ink:wght@100..900&family=Outfit:wght@100..900&family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double+Ink:wght@100..900&family=Bitcount+Grid+Single+Ink:wght@100..900&family=Bitcount+Ink:wght@100..900&family=Kumbh+Sans:wght,YOPQ@100..900,300&family=Outfit:wght@100..900&family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <script src="script.js" defer></script>
+    <title>sneakers</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="header-container">
+        <button class="burder-menu-btn" id="burder-menu-btn">
+          <img
+            src="/assets/burger-menu-icon.png"
+            alt="burger menu"
+            class="burder-menu-icon"
+          />
+        </button>
+        <p class="website_name">sneakers</p>
+
+        <nav class="navbar" id="primary-navigation">
+          <button class="mobile-nav-close" id="mobile-nav-close">X</button>
+          <ul>
+            <li><a class="pages" href="#">Collections</a></li>
+            <li><a class="pages" href="#">Men</a></li>
+            <li><a class="pages active" href="#">Women</a></li>
+            <li><a class="pages" href="#">About</a></li>
+            <li><a class="pages" href="#">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="profile-picture-and-cart-container">
+          <img src="assets/icon-cart.svg" alt="cart" id="cart" />
+          <div id="profile-picture"></div>
+          <div class="cart-container" id="cart-container">
+            <p class="cart-text">Cart</p>
+            <div class="cart-items-container">
+              <p id="empty-cart-text">Your cart is empty.</p>
+              <div class="hidden cart-item" id="cart-item">
+                <img
+                  src="assets/sneaker_image1.jpg"
+                  alt="cart item image"
+                  id="cart-item-image"
+                />
+                <div class="cart-item-info">
+                  <p id="cart-item-name">Fall Limited Edition Sneakers</p>
+                  <p id="cart-item-price">
+                    $125.00 x <span id="cart-item-quantity">0</span>
+                    <span id="cart-item-total-price"></span>
+                  </p>
+                </div>
+                <img
+                  src="assets/delete-icon.svg"
+                  alt="delete icon"
+                  id="delete-icon"
+                />
+              </div>
+              <button class="btn hidden" id="checkout-btn">Checkout</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="images-container">
+        <div class="image-buttons-container">
+          <button class="image-buttons" id="prev-button"><</button>
+          <button class="image-buttons" id="next-button">></button>
+        </div>
+        <img
+          src="/assets/sneaker_image1.jpg"
+          alt="Main product image"
+          class="main-image"
+          id="main-image"
+        />
+        <div class="tumbnails">
+          <img
+            src="/assets/sneaker_image1.jpg"
+            alt="Thumbnail 1"
+            class="thumbnail active"
+          />
+          <img
+            src="/assets/sneaker_image2.jpg"
+            alt="Thumbnail 2"
+            class="thumbnail"
+          />
+          <img
+            src="/assets/sneaker_image3.jpg"
+            alt="Thumbnail 3"
+            class="thumbnail"
+          />
+          <img
+            src="/assets/sneaker_image4.jpg"
+            alt="Thumbnail 4"
+            class="thumbnail"
+          />
+        </div>
+      </div>
+
+      <div id="info-and-order-section">
+        <div class="information-container">
+          <p class="info-text" id="company-name">SNEAKER COMPANY</p>
+          <h1 class="info-text">Fall Limited Edition Sneakers</h1>
+          <p class="info-text" id="product-info">
+            These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they’ll withstand everything
+            the weather can offer.
+          </p>
+          <div class="price-discount-section-container">
+            <div class="price-discount-section">
+              <p class="info-text">$125.00</p>
+              <p class="info-text" id="discount">50%</p>
+            </div>
+
+            <p class="info-text" id="old-price">$250.00</p>
+          </div>
+        </div>
+
+        <div class="order-container">
+          <div class="quantity">
+            <button id="decrease">-</button>
+            <p id="quantity-number">0</p>
+            <button id="increase">+</button>
+          </div>
+          <button class="btn" id="add-to-cart">
+            <img
+              src="assets/icon-cart-white.svg"
+              alt="cart"
+              id="white-cart"
+            />Add to cart
+          </button>
+        </div>
+      </div>
+    </main>
+    <div class="lightbox hidden" id="lightbox">
+      <div class="lightbox-content">
+        <button class="close-lightbox" id="close-lightbox">X</button>
+
+        <button class="lightbox-btn" id="lightbox-prev"><</button>
+
+        <img
+          src="/assets/sneaker_image1.jpg"
+          alt="lightbox image"
+          id="lightbox-image"
+        />
+
+        <button class="lightbox-btn" id="lightbox-next">></button>
+      </div>
+    </div>
+  </body>
+</html>

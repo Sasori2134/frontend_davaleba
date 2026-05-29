@@ -1,0 +1,596 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin-bottom: 12rem;
+}
+
+.website_name {
+    font-weight: 700;
+    font-family: Outfit;
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    letter-spacing: 4%;
+    text-align: center;
+}
+
+.header-container {
+    display: flex;
+    gap: 6rem;
+    margin: 1rem auto 0;
+    padding: 0 2rem;
+    max-width: 90rem;
+    align-items: center;
+    height: 8rem;
+    border-bottom: 0.2rem solid #F7F8FD;
+}
+
+.profile-picture-and-cart-container{
+    position: relative;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: clamp(1.5rem, 3vw, 3.5rem);
+    height: fit-content;
+    width: fit-content;
+    z-index: 20;
+}
+
+#profile-picture {
+    height: clamp(2.5rem, 3.5vw, 3.5rem);
+    width: clamp(2.5rem, 3.5vw, 3.5rem);
+    border-radius: 50%;
+    background-color: black;
+    cursor: pointer;
+    transition: border 0.3s ease;
+}
+
+#profile-picture:hover {
+    border: 0.15rem solid #FF7D1A;
+}
+
+#cart {
+    height: clamp(1.25rem, 2.2vw, 2rem);
+    width: clamp(1.25rem, 2.2vw, 2rem);
+    cursor: pointer;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 3rem;
+    list-style-type: none;
+    height: 100%;
+    align-items: stretch;
+}
+
+
+
+.navbar {
+    display: flex;
+    height: 100%;
+}
+
+.mobile-nav-close {
+    display: none;
+}
+
+.pages {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #68707D;
+    font-family: Kumbh Sans;
+    font-size: 1.3rem;
+    height: 100%;
+    cursor: pointer;
+}
+
+.active {
+    border-bottom: 0.25rem solid #FF7D1A;
+    color: #000000;
+}
+
+.info-text {
+    width: fit-content;
+    font-family: Kumbh Sans;
+}
+
+.information-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 36rem;
+    gap: 1rem;
+}
+
+.information-container h1 {
+    font-weight: 700;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    width: 100%;
+}
+
+#info-and-order-section {
+    display: flex;
+    flex-direction: column;
+    margin-top: 6rem;
+    flex: 1 1 30rem;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 6rem auto 0;
+    padding: 0 2rem;
+    gap: clamp(2rem, 5vw, 10rem);
+    max-width: 90rem;
+}
+
+#product-info {
+    font-weight: 500;
+    color: #68707D;
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+}
+
+#company-name {
+    font-weight: 700;
+    color: #FF7D1A;
+    letter-spacing: 8%;
+    font-size: 1.2rem;
+}
+
+.price-discount-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 700;
+    font-size: clamp(2.0rem, 5vw, 2.5rem);
+}
+
+#discount {
+    color: #FF7D1A;
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    padding: 0.3rem 0.8rem 0.3rem 0.8rem;
+    background-color: #FFEDE0;
+    border-radius: 0.25rem;
+}
+
+#old-price {
+    text-decoration: line-through;
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    font-weight: 700;
+    color: #68707D;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background-color: #FF7D1A;
+    color: white;
+    font-family: Kumbh Sans;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 1rem 2rem 1rem 2rem;
+    border: none;
+    border-radius: 0.6rem;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+    width: 20rem;
+    height: 4rem
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.order-container{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    background-color: #F7F8FD;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border-radius: 0.5rem;
+    height: 4rem;
+    font-weight: 700;
+    font-family: Kumbh Sans;
+}
+
+#increase, #decrease {
+    font-size: 1.5rem;
+    color: #FF7D1A;
+    font-weight: 700;
+    padding: 0.5rem 0.8rem 0.5rem 0.8rem;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.images-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: min(100%, 40rem);
+    flex: 1 1;
+    position: relative;
+    height: fit-content;
+}
+
+.main-image {
+    width: 100%;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    display: block;
+}
+
+.tumbnails {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.thumbnail {
+    width: clamp(4rem, 12vw, 8rem);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.thumbnail.active {
+    border: 0.15rem solid #FF7D1A;
+    opacity: 0.5;
+}
+
+.thumbnail:hover {
+    opacity: 0.5;
+}
+
+.cart-container {
+    position: absolute;
+    top: 4rem;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    width: min(25rem, calc(100vw - 2rem));
+    min-height: 15rem;
+    visibility: hidden;
+    z-index: 30;
+}
+
+.cart-text {
+    font-family: Kumbh Sans;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border-bottom: 0.1rem solid #76809147;
+    padding-bottom: 0.5rem;
+}
+
+.cart-items-container {
+    display: flex;
+    flex: 1;
+    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#empty-cart-text {
+    font-family: Kumbh Sans;
+    font-size: 1.2rem;
+    color: #68707D;
+}
+
+.visible {
+    visibility: visible;
+}
+
+.burder-menu-btn {
+    background-color: transparent;
+    border: none;
+    display: none;
+}
+
+.burder-menu-icon {
+    height: 1.2rem;
+}
+
+.price-discount-section-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5rem;
+}
+
+.image-buttons {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    width: 3rem;
+    font-size: 1.5rem;
+    font-family: Kumbh Sans;
+    font-weight: 700;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0,0,0,0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.lightbox-content {
+    position: relative;
+}
+
+#lightbox-image {
+    width: min(90vw, 500px);
+    max-width: 100%;
+    height: auto;
+    border-radius: 1rem;
+}
+
+.close-lightbox {
+    position: absolute;
+    top: -3rem;
+    right: 0;
+    transition: color 0.3s ease;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.close-lightbox:hover,
+.lightbox-btn:hover{
+    color: #FF7D1A;
+}
+
+.lightbox-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: color 0.3s ease;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+#lightbox-prev {
+    left: -25px;
+}
+
+#lightbox-next {
+    right: -25px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+#cart-item-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 0.5rem;
+}
+
+.cart-item-info,
+#cart-item-total-price {
+    font-family: Kumbh Sans;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+#cart-item-total-price {
+    margin-left: auto;
+    font-weight: 700;
+}
+
+#delete-icon {
+    cursor: pointer;
+}
+
+@media (max-width: 480px) {
+    .lightbox-btn {
+        width: 3rem;
+        height: 3rem;
+        font-size: 1.25rem;
+    }
+
+    #lightbox-prev {
+        left: 0.75rem;
+    }
+
+    #lightbox-next {
+        right: 0.75rem;
+    }
+
+    .close-lightbox {
+        top: 0.5rem;
+        right: 0.5rem;
+        font-size: 1.5rem;
+    }
+}
+
+
+@media (max-width: 900px) {
+
+    .header-container {
+        gap: 2rem;
+        padding: 0 1rem;
+        position: relative;
+    }
+
+    .burder-menu-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        width: 2.5rem;
+        height: 2.5rem;
+        flex: 0 0 auto;
+    }
+
+    .navbar {
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: min(80vw, 20rem);
+        height: 100dvh;
+        padding: 6rem 1.5rem 2rem;
+        background: white;
+        box-shadow: 1rem 0 2rem rgba(0, 0, 0, 0.12);
+        z-index: 50;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        pointer-events: none;
+    }
+
+    .mobile-nav-close {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 2.5rem;
+        height: 2.5rem;
+        background: transparent;
+        border: none;
+        color: #68707D;
+        font-family: Kumbh Sans;
+        font-size: 1.75rem;
+        font-weight: 700;
+        cursor: pointer;
+    }
+
+    .navbar.open {
+        transform: translateX(0);
+        pointer-events: auto;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        height: auto;
+        width: 100%;
+    }
+
+    .pages {
+        height: auto;
+        padding: 0.25rem 0;
+    }
+
+    .active {
+        border-bottom: none;
+        color: #68707D;
+    }
+
+    body {
+        margin-bottom: 8rem;
+    }
+
+    .cart-container {
+        top: calc(100% + 0.75rem);
+    }
+
+    main {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 0;
+        margin: 0;
+    }
+
+    #info-and-order-section{
+        padding: 1rem;
+        margin-top: 0
+    }
+
+    .tumbnails{
+        display: none;
+    }
+
+    .price-discount-section-container {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    #old-price {
+        margin-left: auto;
+    }
+
+    .images-container,
+    #info-and-order-section,
+    .information-container {
+        width: 100%;
+        max-width: none;
+    }
+
+
+    .main-image {
+
+        border-radius: 0;
+    }
+
+    .image-buttons-container {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 1rem;
+        z-index: 1;
+    }
+
+    .image-buttons {
+        display: flex;
+    }
+
+    .order-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .quantity,
+    .btn {
+        width: 100%;
+    }
+}
+
+.hidden {
+    display: none;
+}
